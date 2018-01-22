@@ -1,19 +1,15 @@
 language: android
-
 jdk: oraclejdk8
-
 android:
   components:
     - tools
-    - android-26
-    - build-tools-26.0.2
-    - platform-tools
+    - build-tools-23.0.2
+    - android-23
+    - extra-android-m2repository
+    - extra-android-support
 
-script: ./gradlew build
+before_install:
+  - chmod +x gradlew
 
-after_success:
-  - for name in $(find $TRAVIS_BUILD_DIR -name '*.apk'); do ls -hl $name;  done
-  - date
-
-after_failure:
-  for name in $(find $TRAVIS_BUILD_DIR -name lint-results*.xml); do echo $name; cat -n $name; done
+script:
+  - ./gradlew assembleRelease
