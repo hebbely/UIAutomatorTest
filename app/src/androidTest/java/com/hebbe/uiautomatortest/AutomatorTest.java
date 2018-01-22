@@ -31,7 +31,7 @@ import static org.junit.Assert.*;
 @RunWith(AndroidJUnit4.class)
 @SdkSuppress(minSdkVersion = 22)
 public class AutomatorTest {
-    /*
+
     private static final String PACKAGE_ESPRESSOTEST = "com.hebbe.espressotest";
     private static final String PACKAGE_SETTING = "com.android.settings";
 
@@ -138,5 +138,5 @@ public class AutomatorTest {
         //点击切换到前面的espressoTestsApp
         espressoTestApp.click();
     }
-    */
+
 }
